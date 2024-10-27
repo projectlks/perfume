@@ -16,7 +16,7 @@ export default function App() {
       <Trending />
       <LimitedOffer />
 
-      <div className="w-full h-screen border-t-2 relative border-third">
+      <div className="w-full h-screen border-t-2  relative border-third">
         <span className="absolute bottom-full left-0 right-0 mx-auto w-fit px-4 py-2 text-4xl font-bold translate-y-1/2 transform bg-[#f0f8ff] leading-none">
           <img
             src={tree}

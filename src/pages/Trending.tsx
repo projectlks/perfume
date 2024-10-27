@@ -69,13 +69,18 @@ export default function Trending() {
     });
   };
 
-
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
-    <section className="w-full overflow-hidden bg-primary overflow-x-hidden py-10 md:py-16 xl:py-20 flex flex-col items-center">
+    <section className="w-full overflow-hidden bg-primary overflow-x-hidden py-10 md:py-16 xl:py-[150px] flex flex-col items-center">
+      <img
+        src="        https://img.freepik.com/premium-vector/elegant-line-drawing-floral-leaf-illustration-invites-cards_601748-53363.jpg?w=2000 2000w
+"
+        alt=""
+      />
+
       <p className="text-lg md:text-xl xl:text-2xl text-secondary font-bold mb-2 md:mb-4">
         Trending perfume this week
       </p>
@@ -117,7 +122,7 @@ export default function Trending() {
       <div className="w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
         {cardData.map((card, index) => (
           <Card
-          data-aos ='slide-down'
+            data-aos="slide-down"
             key={index}
             title={card.title}
             category={card.category}
