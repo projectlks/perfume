@@ -1,4 +1,7 @@
 // Card.tsx
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS CSS
 
 interface CardProps {
   title: string;
@@ -15,14 +18,22 @@ export default function Card({
   originalPrice,
   image,
 }: CardProps) {
+
+
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+ 
+
   return (
-    <div className="w-full mb-10">
-      <span className="w-full flex mb-6 justify-center items-center h-auto aspect-square overflow-hidden bg-[#f0f8ff] ">
+    <div className="w-full mb-10 hover:scale-110 transition-all cursor-pointer ">
+      <span data-aos = 'slide-up' className="w-full flex mb-6 justify-center items-center h-auto aspect-square overflow-hidden bg-[#f0f8ff] ">
         <img
           src={image}
           alt="Fragrance"
-          className="w-[80%] rounded-2xl mb-3 reflect-bottom"
-        />
+          className="h-[80%] w-auto rounded-2xl   mb-3 reflect-bottom"
+        /> 
       </span>
 
       <div className="w-full px-7">

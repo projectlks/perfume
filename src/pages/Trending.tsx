@@ -1,7 +1,12 @@
 // Trending.tsx
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import img from "../assets/imgs/perfume.png";
+import img2 from "../assets/imgs/dior.png";
+import img3 from "../assets/imgs/coco.png";
+import img4 from "../assets/imgs/redRose.png";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS CSS
 
 interface Position {
   offsetLeft: number;
@@ -29,21 +34,21 @@ const cardData: CardItem[] = [
     category: "Woody",
     price: "55.00",
     originalPrice: "70.00",
-    image: img,
+    image: img2,
   },
   {
     title: "Citrus Breeze",
     category: "Citrus",
     price: "40.00",
     originalPrice: "50.00",
-    image: img,
+    image: img3,
   },
   {
     title: "Mystic Oriental",
     category: "Oriental",
     price: "60.00",
     originalPrice: "75.00",
-    image: img,
+    image: img4,
   },
 ];
 
@@ -54,7 +59,7 @@ export default function Trending() {
   });
 
   const liClass =
-    "text-base md:text-lg font-semibold cursor-pointer px-3  md:px-4 py-2  hover:text-secondary transition-colors";
+    "text-base md:text-lg font-semibold cursor-pointer px-3  md:px-4 py-2 text-third font-bold hover:text-secondary transition-colors";
 
   const handleItemClick = (event: React.MouseEvent<HTMLLIElement>) => {
     const target = event.currentTarget;
@@ -64,8 +69,13 @@ export default function Trending() {
     });
   };
 
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <section className="w-full bg-primary overflow-x-hidden py-10 md:py-16 xl:py-20 flex flex-col items-center">
+    <section className="w-full overflow-hidden bg-primary overflow-x-hidden py-10 md:py-16 xl:py-20 flex flex-col items-center">
       <p className="text-lg md:text-xl xl:text-2xl text-secondary font-bold mb-2 md:mb-4">
         Trending perfume this week
       </p>
@@ -107,6 +117,7 @@ export default function Trending() {
       <div className="w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
         {cardData.map((card, index) => (
           <Card
+          data-aos ='slide-down'
             key={index}
             title={card.title}
             category={card.category}
