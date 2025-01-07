@@ -52,10 +52,10 @@ export default function ShowProducts() {
 
           <div className="w-[90%] mx-auto xl:w-1/2">
             <header>
-              <p className="text-base md:text-3xl text-secondary">
+              <p className="text-base md:text-3xl font-Dancing text-secondary">
                 {product.subtitle}
               </p>
-              <h1 className="text-4xl xl:text-7xl w-full text-balance mb-5">
+              <h1 className="text-4xl xl:text-7xl w-full font-lato text-balance mb-5">
                 {product.title}
               </h1>
             </header>

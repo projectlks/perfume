@@ -8,6 +8,8 @@ import img4 from "../assets/imgs/redRose.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS
 
+import tree from "../assets/svg/12.svg";
+
 interface Position {
   offsetLeft: number;
   offsetWidth: number;
@@ -74,14 +76,10 @@ export default function Trending() {
   }, []);
 
   return (
-    <section className="w-full overflow-hidden bg-primary overflow-x-hidden py-10 md:py-16 xl:py-[150px] flex flex-col items-center">
-      <img
-        src="        https://img.freepik.com/premium-vector/elegant-line-drawing-floral-leaf-illustration-invites-cards_601748-53363.jpg?w=2000 2000w
-"
-        alt=""
-      />
+    <section className="w-full relative overflow-hidden bg-primary overflow-x-hidden py-10 md:py-16 xl:pt-[50px] xl:pb-[150px] flex flex-col items-center">
+      <img src={tree} alt="img" className="w-[200px]  h-auto aspect-square  top-0 " />
 
-      <p className="text-lg md:text-xl xl:text-2xl text-secondary font-bold mb-2 md:mb-4">
+      <p className="text-lg md:text-xl xl:text-2xl text-secondary font-Dancing font-bold  mb-2 md:mb-4">
         Trending perfume this week
       </p>
 

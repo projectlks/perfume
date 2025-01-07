@@ -14,7 +14,11 @@ export default {
         "zoom-in": "zoom-in 0.5s ease-in-out forwards",
         "slide-up": "slide-up 0.5s ease-in-out forwards",
       },
-      keyframes: {},
+
+        fontFamily: {
+        lato: ['Lato', 'sans-serif'], // Custom font class for 'Lato'
+        Dancing: ['Dancing Script', 'cursive'], // Custom font class for 'Dancing Script'
+      },
     },
   },
   plugins: [],

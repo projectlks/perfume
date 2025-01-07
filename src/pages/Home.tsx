@@ -16,7 +16,7 @@ export default function Home() {
       items-center flex flex-col xl:flex-row justify-evenly xl:pt-0 py-10  relative"
       >
         <div className="w-full xl:w-[60%] px-4 md:px-10">
-          <p className="text-xl xl:text-3xl font-bold text-secondary ">
+          <p className="text-xl xl:text-3xl font-bold font-Dancing text-secondary ">
             Women Fragrance & Perfume
           </p>
 
